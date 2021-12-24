@@ -58,8 +58,10 @@ img {
     padding: 5% 30% 0 30%;
     justify-content: center;
 }
-.icon {
+.icon, .icon:visited {
     padding: 10%;
+    color: #000;
+    transition: color 0.2s ease;
 }
 .icon:hover {
     padding: 10%;
