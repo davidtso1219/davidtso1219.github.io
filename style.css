@@ -58,7 +58,7 @@ img {
     padding: 5% 30% 0 30%;
     justify-content: center;
 }
-.icon, .icon:visited {
+.icon, .icon:visited, icon:active {
     padding: 10%;
     color: #000;
     transition: color 0.2s ease;
