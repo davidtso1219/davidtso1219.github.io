@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Arima Madurai", sans-serif;
+    margin: 0 auto;
+    border: 0;
+    padding: 5% 12% 5% 12%;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 300;
+}
+h1 {
+    font-size: 84px;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 5% 0 0 0;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+.nav-bar {
+    padding: 48px 0px 0px 0px;
+}
+.nav-link {
+    padding: 12px 32px 12px 0px;
+}
+.nav-link:hover {
+    color: rgb(132, 132, 132);
+    cursor: pointer;
+}
+.section {
+    display: flex;
+}
+#intro-container {
+    width: 80%;
+    padding: 5% 5% 5% 0;
+}
+.text {
+    padding: 5% 0 0 0;
+}
+#pfp-container {
+    border-radius: 50px;
+    background: #E8E6E6;
+    margin: 5% 0 0 0;
+    padding: 3%;
+}
+.summary {
+    padding: 10% 0 0 18%;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.icons-bar {
+    display: flex;
+    padding: 5% 30% 0 30%;
+    justify-content: center;
+}
+.icon {
+    padding: 10%;
+}
+.icon:hover {
+    padding: 10%;
+    color: rgb(132, 132, 132);
+    cursor: pointer;
+}
+@media (max-width: 1200px) {
+    .section {
+        flex-direction: column;
+    }
+}
