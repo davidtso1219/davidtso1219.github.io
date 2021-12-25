@@ -52,11 +52,16 @@ img {
 .text {
     padding: 5% 0 0 0;
 }
-#pfp-container {
+.card {
     border-radius: 50px;
     background: #E8E6E6;
     margin: 5% 0 0 0;
     padding: 3%;
+    transition: all 0.4s;
+}
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 10px 20px 10px #000;
 }
 .summary {
     margin: auto;
