@@ -5,19 +5,19 @@ body {
     font-family: "Arima Madurai", sans-serif;
     margin: 0 auto;
     border: 0;
-    padding: 0% 12% 0% 12%;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
+    color: #000;
 }
 h1 {
-    font-size: 84px;
+    font-size: 64px;
     font-weight: 400;
     margin: 0 auto;
 }
 a, a:visited, a:active {
     text-decoration: none;
-    color: #000;
+    color: inherit;
 }
 a:hover {
     cursor: pointer;
@@ -27,18 +27,18 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 50%;
 }
 .nav-bar {
     display: flex;
-    padding: 48px 0px 0px 0px;
+    padding: 3% 12% 0 12%;
 }
 .nav-link, .nav-link:visited, .nav-link:active {
     padding: 12px 32px 12px 0px;
 }
 .section {
+    padding: 0 12%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 #intro-container {
@@ -47,7 +47,7 @@ img {
 }
 .subheading {
     font-weight: 400;
-    font-size: 36px;
+    font-size: 32px;
 }
 .text {
     padding: 5% 0 0 0;
@@ -55,27 +55,28 @@ img {
 .card {
     border-radius: 50px;
     background: #E8E6E6;
-    margin: 5% 0 0 0;
+    margin: 7% 2% 2% 2%;
     padding: 3%;
+    max-width: 450px;
     transition: all 0.4s;
+    color: #000;
 }
 .card:hover {
     transform: translateY(-20px);
-    box-shadow: 10px 20px 10px #000;
+    box-shadow: 8px 10px #898989;
 }
 .summary {
     margin: auto;
     padding: 0;
     width: 80%;
-    font-size: 0.8em;
     font-weight: 300;
     list-style-type: none;
     justify-self: center;
     text-align: center;
 }
 .name {
-    padding: 20% 0 5% 0;
-    font-size: 1.1em;
+    padding: 12% 0 5% 0;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
 }
@@ -88,8 +89,49 @@ img {
     padding: 10%;
     transition: color 0.2s ease;
 }
-#academic {
-    background: #000;
+.full-width {
+    margin-left: -12.5%;
+    margin-right: -12.5%;
+}
+#academics {
+    padding: 10em;
+    flex-direction: column;
+    text-align: center;
+    color: #3B88B4;
+}
+.timeline {
+    width: 2px;
+    height: 70rem;
+    margin: 5em 0 5em 0;
+    background: linear-gradient(0deg, rgba(59,136,180,1) 0%, rgba(255,255,255,1) 100%);
+    z-index: -2;
+    position: absolute;
+}
+#academics .card {
+    padding: 2.5%;
+    color: #fff;
+}
+#academics .card:nth-child(odd) {
+    margin: 10% 50% 0 0;
+}
+#academics .card:nth-child(even) {
+    margin: 10% 0 0 50%;
+}
+#academics #card-one {
+    background: #8AC5E7;
+}
+#academics #card-two {
+    background: #71AED0;
+}
+#academics #card-three {
+    background: #3B88B4;
+}
+#academics .card:hover {
+    transform: translateY(-20px);
+    box-shadow: 8px 10px;
+}
+.school-name {
+    font-size: 24px;
 }
 @media (max-width: 1200px) {
     .section{
