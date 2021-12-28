@@ -37,7 +37,7 @@ img {
     padding: 12px 32px 12px 0px;
 }
 .section {
-    padding: 0 12%;
+    padding: 5% 12%;
     display: flex;
     align-items: center;
 }
@@ -73,6 +73,7 @@ img {
     list-style-type: none;
     justify-self: center;
     text-align: center;
+    font-size: 16px;
 }
 .name {
     padding: 12% 0 5% 0;
@@ -89,52 +90,78 @@ img {
     padding: 10%;
     transition: color 0.2s ease;
 }
-.full-width {
-    margin-left: -12.5%;
-    margin-right: -12.5%;
-}
 #academics {
-    padding: 10em;
     flex-direction: column;
     text-align: center;
     color: #3B88B4;
 }
+#academics h1{
+    margin: 0 0 10% 0;
+}
 .timeline {
     width: 2px;
-    height: 70rem;
+    height: 50em;
     margin: 5em 0 5em 0;
     background: linear-gradient(0deg, rgba(59,136,180,1) 0%, rgba(255,255,255,1) 100%);
     z-index: -2;
     position: absolute;
 }
-#academics .card {
-    padding: 2.5%;
+.school-container {
+    width: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content:space-between;
+}
+.school-container .card {
+    min-width: 250px;
+    max-width: 350px;
+    margin: 2% 0;
+    padding: 3% 4%;
+    justify-content: center;
     color: #fff;
 }
-#academics .card:nth-child(odd) {
-    margin: 10% 50% 0 0;
+.school-container .box {
+    min-width: 50%;
 }
-#academics .card:nth-child(even) {
-    margin: 10% 0 0 50%;
-}
-#academics #card-one {
+#card-one {
     background: #8AC5E7;
 }
-#academics #card-two {
+#card-one:hover {
+    background: #8AC5E7;
+}
+#card-two {
     background: #71AED0;
 }
-#academics #card-three {
+#card-three {
     background: #3B88B4;
 }
-#academics .card:hover {
+#card-one:hover, #card-two:hover, #card-three:hover {
+    background: #1f9ff5;
+    color: #ffffff;
+}
+.school-container .card:hover {
     transform: translateY(-20px);
     box-shadow: 8px 10px;
+    background: rgb(129, 215, 242);
 }
 .school-name {
     font-size: 24px;
 }
+.dashline-container {
+    margin: 0;
+}
+.dashline {
+  border:none;
+  border-top:1px dashed #f00;
+  color:#fff;
+  background-color:#fff;
+  height:1px;
+  width:50%;
+  justify-self: center;
+}
 @media (max-width: 1200px) {
     .section{
+        text-align: center;
         flex-direction: column;
     }
     .nav-bar {
