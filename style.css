@@ -31,13 +31,43 @@ img {
 }
 .nav-bar {
     display: flex;
-    padding: 3% 12% 0 12%;
+    justify-content: space-between;
+    padding: 6% 12% 2% 12%;
+    border: 2px;
+    border-bottom: 2px;
+}
+.title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+}
+.nav-link-container {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
 }
 .nav-link, .nav-link:visited, .nav-link:active {
-    padding: 12px 32px 12px 0px;
+    min-width: 100px;
+    padding: 8px 22px 8px 22px;
+    margin: 0 30px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.2s;
+    font-weight: 400;
+    justify-content: center;
+}
+.nav-link:hover {
+    background: #898989;
+    color: #fff;
+    border-color: #898989;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .section {
-    padding: 5% 12%;
+    padding: 0 12% 5% 12%;
     display: flex;
     align-items: center;
 }
@@ -108,7 +138,7 @@ img {
 }
 .school-container {
     width: 100%;
-    padding: 2.5rem;
+    padding: 2.5rem 0;
     display: flex;
     justify-content:space-between;
 }
@@ -120,8 +150,13 @@ img {
     justify-content: center;
     color: #fff;
 }
-.school-container .box {
+.horizontal-box {
     min-width: 50%;
+    max-width: 50%;
+}
+.vertical-box {
+    min-height: 50%;
+    max-height: 50%;
 }
 #card-one {
     background: #8AC5E7;
@@ -142,22 +177,23 @@ img {
 .school-container .card:hover {
     transform: translateY(-20px);
     box-shadow: 8px 10px;
-    background: rgb(129, 215, 242);
 }
 .school-name {
     font-size: 24px;
 }
 .dashline-container {
+    width: 11rem;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
 }
 .dashline {
-  border:none;
-  border-top:1px dashed #f00;
-  color:#fff;
-  background-color:#fff;
-  height:1px;
-  width:50%;
-  justify-self: center;
+    width: 100%;
+    min-height: 50%;
+    max-height: 50%;
+    border-top:1px dashed #3B88B4;
+    background-color: #000;
 }
 @media (max-width: 1200px) {
     .section{
@@ -165,8 +201,13 @@ img {
         flex-direction: column;
     }
     .nav-bar {
-        justify-content: center;
         align-items: center;
+        flex-direction: column;
+    }
+    .nav-link-container {
+        width: 100%;
+        padding: 20px 0 0 0;
+        justify-content: center;
     }
     #intro-container {
         padding: 5% 5% 5% 5%;
