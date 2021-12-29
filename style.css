@@ -58,11 +58,12 @@ img {
     width: 60%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 .nav-link, .nav-link:visited, .nav-link:active {
     min-width: 100px;
     padding: 8px 22px 8px 22px;
-    margin: 0 20px;
+    margin: 0 auto;
     border: 2px solid #000;
     background: #fff;
     color: #000;
