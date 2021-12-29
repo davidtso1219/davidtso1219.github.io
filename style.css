@@ -15,9 +15,16 @@ h1 {
     font-weight: 400;
     margin: 0 auto;
 }
+b {
+    color: rgb(84, 127, 218);
+    /* color: rgb(82, 139, 226); */
+}
 a, a:visited, a:active {
     text-decoration: none;
     color: inherit;
+}
+a p {
+    margin: 0 auto;
 }
 a:hover {
     cursor: pointer;
@@ -35,11 +42,13 @@ img {
     padding: 6% 12% 2% 12%;
     border: 2px;
     border-bottom: 2px;
+    background-color: #fff;
+    color: #000;
 }
 .title {
     text-align: center;
-    font-weight: 400;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 35px;
 }
 .nav-link-container {
     width: 60%;
@@ -54,16 +63,16 @@ img {
     background: #fff;
     color: #000;
     text-align: center;
-    border-radius: 20px;
-    transition: all 0.2s;
     font-weight: 400;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
 }
 .nav-link:hover {
     background: #898989;
     color: #fff;
     border-color: #898989;
-    transform: translateY(-5px);
+    transform: translateY(-7px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .section {
@@ -83,7 +92,6 @@ img {
     padding: 5% 0 0 0;
 }
 .card {
-    border-radius: 50px;
     background: #E8E6E6;
     margin: 7% 2% 2% 2%;
     padding: 3%;
@@ -123,77 +131,25 @@ img {
 #academics {
     flex-direction: column;
     text-align: center;
-    color: #3B88B4;
 }
 #academics h1{
     margin: 0 0 10% 0;
 }
-.timeline {
-    width: 2px;
-    height: 50em;
-    margin: 5em 0 5em 0;
-    background: linear-gradient(0deg, rgba(59,136,180,1) 0%, rgba(255,255,255,1) 100%);
-    z-index: -2;
-    position: absolute;
-}
-.school-container {
-    width: 100%;
-    padding: 2.5rem 0;
-    display: flex;
-    justify-content:space-between;
-}
-.school-container .card {
-    min-width: 250px;
-    max-width: 350px;
-    margin: 2% 0;
-    padding: 3% 4%;
-    justify-content: center;
-    color: #fff;
-}
-.horizontal-box {
-    min-width: 50%;
-    max-width: 50%;
-}
-.vertical-box {
-    min-height: 50%;
-    max-height: 50%;
-}
-#card-one {
-    background: #8AC5E7;
-}
-#card-one:hover {
-    background: #8AC5E7;
-}
-#card-two {
-    background: #71AED0;
-}
-#card-three {
-    background: #3B88B4;
-}
-#card-one:hover, #card-two:hover, #card-three:hover {
-    background: #1f9ff5;
-    color: #ffffff;
-}
-.school-container .card:hover {
-    transform: translateY(-20px);
-    box-shadow: 8px 10px;
-}
-.school-name {
-    font-size: 24px;
-}
-.dashline-container {
-    width: 11rem;
+.school {
+    width: 20%;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    z-index: 1;
+    justify-content: center;
 }
-.dashline {
-    width: 100%;
-    min-height: 50%;
-    max-height: 50%;
-    border-top:1px dashed #3B88B4;
-    background-color: #000;
+.school-name {
+
+}
+#yanping {
+    color: #00C049;
+}
+#yanping img {
+    width: 50px;
+    margin: 0;
 }
 @media (max-width: 1200px) {
     .section{
