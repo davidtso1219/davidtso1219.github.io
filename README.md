@@ -29,7 +29,16 @@ My name is **Hao-Ting Tso**, but I go by **David**. I am new to the world of pro
 
 ## Notes
 
-TBA
+### Winter 2022
+
+1. CSE 100
+2. CSE 140
+3. CSE 140L
+
+### Spring 2022
+
+1. CSE 105
+2. CSE 101
 
 ## Projects
 
