@@ -27,10 +27,10 @@ My name is **Hao-Ting Tso**, but I go by **David**. I am new to the world of pro
 2. [Foothill College](https://www.foothill.edu) (Jan. 2020 - Jun. 2021)
 3. [University of California, San Diego](https://www.ucsd.edu) (Sep. 2021 - Present)
 
-## Projects
+## Notes
 
 TBA
 
-## Notes
+## Projects
 
 TBA
