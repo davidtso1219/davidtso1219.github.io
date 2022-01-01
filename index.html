@@ -99,7 +99,7 @@
             <li>
                 <div class="quarter">
                     <div class="arrow">></div>
-                    Winter 2022
+                    <div class="quarter-name">Winter 2022</div>
                 </div>
                 <ul>
                     <li class="class">CSE 100</li>
@@ -128,13 +128,13 @@ function toggle_classes(quarter) {
 
     for (var j = 0; j < classes.length; j++) {
         classes[j].classList.toggle("show")
-        console.log(classes[j])
     }
 }
 
 for (var i = 0; i < quarters.length; i++) {
     quarters[i].onclick = function() {
         this.classList.toggle("active")
+        this.children[0].classList.toggle("rotate")
         toggle_classes(this)
 
         for (var j = 0; j < quarters.length; j++) {
