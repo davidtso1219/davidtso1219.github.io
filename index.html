@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;600&family=Readex+Pro:wght@400;600&family=Redacted+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;600;800&family=Readex+Pro:wght@400;600&family=Redacted+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
@@ -25,7 +25,7 @@
         </div>
     </div>
     <hr>
-    <div class="section">
+    <div class="section" id="intro-section">
         <div id="intro">
             <div>
                 <h1>ABOUT ME</h1>
@@ -95,6 +95,55 @@
     <hr class="section-divider">
     <div class="section" id="notes-section">
         <h1>Notes</h1>
+        <ul>
+            <li>
+                <div class="quarter">
+                    <div class="arrow">></div>
+                    Winter 2022
+                </div>
+                <ul>
+                    <li class="class">CSE 100</li>
+                    <li class="class">CSE 140</li>
+                    <li class="class">CSE 140L</li>
+                </ul>
+            </li>
+            <li>
+                <div class="quarter">
+                    <div class="arrow">></div>
+                    <div>Spring 2022</div>
+                </div>
+                <ul>
+                    <li class="class">CSE 105</li>
+                    <li class="class">CSE 110</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </body>
+<script>
+quarters = document.querySelectorAll(".quarter")
+
+function toggle_classes(quarter) {
+    classes = quarter.nextElementSibling.children
+
+    for (var j = 0; j < classes.length; j++) {
+        classes[j].classList.toggle("show")
+        console.log(classes[j])
+    }
+}
+
+for (var i = 0; i < quarters.length; i++) {
+    quarters[i].onclick = function() {
+        this.classList.toggle("active")
+        toggle_classes(this)
+
+        for (var j = 0; j < quarters.length; j++) {
+            if (this != quarters[j] && quarters[j].classList.contains("active")) {
+                quarters[j].classList.remove("active")
+                toggle_classes(quarters[j])
+            }
+        }
+    }
+}
+</script>
 </html>
