@@ -204,6 +204,7 @@ ul {
 .quarter {
     width: 700px;
     padding: 16px;
+    padding-left: 32px;
     display: flex;
     justify-content: flex-start;
     background: transparent;
