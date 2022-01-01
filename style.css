@@ -261,6 +261,9 @@ ul {
         text-align: center;
         flex-direction: column;
     }
+    #intro-section {
+        flex-direction: column;
+    }
     .nav-bar {
         align-items: center;
         flex-direction: column;
@@ -278,5 +281,8 @@ ul {
     }
     #academics-section a {
         margin: 20px auto;
+    }
+    .quarter {
+        width: 400px;
     }
 }

@@ -18,6 +18,7 @@ for (var i = 0; i < quarters.length; i++) {
         for (var j = 0; j < quarters.length; j++) {
             if (this != quarters[j] && quarters[j].classList.contains("active")) {
                 quarters[j].classList.remove("active")
+                quarters[j].children[0].classList.toggle("rotate")
                 toggle_classes(quarters[j])
             }
         }
