@@ -8,13 +8,6 @@
 </head>
 <body>
 </body>
-<script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const quarter = urlParams.get('quarter');
-    const course = urlParams.get("class");
-    const md_path = "./notes/" + quarter + "/" + course + ".md"
-    document.getElementsByTagName("title")[0].innerHTML = course.replace(/_/, ' ').toUpperCase()
-</script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="notes.js"></script>
 </html>
