@@ -1,16 +1,17 @@
-quarters = document.querySelectorAll(".quarter")
+const quarters = document.querySelectorAll(".quarter")
+const classes = document.querySelectorAll(".class")
 
 function toggle_classes(quarter) {
-    classes = quarter.nextElementSibling.children
+    var classes = quarter.nextElementSibling.children
 
     for (var j = 0; j < classes.length; j++) {
         classes[j].classList.toggle("show")
-        console.log(classes[j])
     }
 }
 
 for (var i = 0; i < quarters.length; i++) {
     quarters[i].onclick = function() {
+
         this.classList.toggle("active")
         this.children[0].classList.toggle("rotate")
         toggle_classes(this)
@@ -22,5 +23,12 @@ for (var i = 0; i < quarters.length; i++) {
                 toggle_classes(quarters[j])
             }
         }
+    }
+}
+
+for (var i = 0; i < classes.length; i++) {
+    classes[i].onclick = function() {
+        window.location.href = "./notes/" + this.getAttribute("quarter") + "/" + this.innerHTML.replace(/\ /, '_').toLowerCase() + '.md'
+        // window.location.href = "./notes.html?class=" + this.innerHTML.replace(/\ /, '_').toLowerCase() + "&quarter=" + this.getAttribute("quarter")
     }
 }

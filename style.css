@@ -62,6 +62,7 @@ ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
 }
 .nav-link, .nav-link:visited, .nav-link:active {
     min-width: 100px;
