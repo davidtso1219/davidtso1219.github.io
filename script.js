@@ -28,7 +28,7 @@ for (var i = 0; i < quarters.length; i++) {
 
 for (var i = 0; i < classes.length; i++) {
     classes[i].onclick = function() {
-        window.location.href = "./notes/" + this.getAttribute("quarter") + "/" + this.innerHTML.replace(/\ /, '_').toLowerCase()
-        // window.location.href = "./notes.html?class=" + this.innerHTML.replace(/\ /, '_').toLowerCase() + "&quarter=" + this.getAttribute("quarter")
+        // window.location.href = "./notes/" + this.getAttribute("quarter") + "/" + this.innerHTML.replace(/\ /, '_').toLowerCase()
+        window.location.href = "./notes.html?class=" + this.innerHTML.replace(/\ /, '_').toLowerCase() + "&quarter=" + this.getAttribute("quarter")
     }
 }
