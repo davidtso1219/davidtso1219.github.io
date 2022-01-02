@@ -19,7 +19,7 @@ Age: 19
 
 ### Hello, there!
 
-My name is **Hao-Ting Tso**, but I go by **David**. I am new to the world of programming and computer science. I started learning while taking a class at a community college, Foothill College. (Foothill for the win!) I was intrigued about it and I dived into different parts of it. But I did not have a chance to start learning the part of web development. I hope I can use this website to practice my webdev skill as well as to record my journey as becoming a more well-rounded software engineer.
+My name is **Hao-Ting Tso**, but I go by **David**. I hope I can use this website to practice my webdev skill to record my journey as becoming a web developer. I am interested in various fields of computer science such as full-stack development, machine learning, blockchain technology, and bioinformatic. I also have several hobbies such as playing basketball and waching movie.
 
 ## Academics History
 
