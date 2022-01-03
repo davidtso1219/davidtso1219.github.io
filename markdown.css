@@ -1,25 +1,62 @@
 body {
     border: 0;
     margin: 0 auto;
-    font-family: 'Arima Madurai', cursive;
-    color:rgb(32, 82, 245);
+    font-family: 'Source Code Pro', monospace;
+    background: #000;
+    /* color: #fff; */
+    color: rgb(34, 224, 50);
 }
 
 .content {
-    padding: 0 400px;
-}
-
-h1 {
-    margin: 0 -400px 30px -400px;
-    padding: 70px 0;
-    color: #fff;
-    font-size: 56px;
-    text-align: center;
-    background: linear-gradient(to right bottom,
-                rgba(76, 216, 255, 0.8),
-                rgba(30, 108, 217, 0.8));
+    padding: 0 20rem;
+    display: flex;
+    flex-direction: column;
 }
 
 h2, h3, h4, h5 {
-    padding: 40px 0;
+    margin: 40px 0 20px 0;
+}
+
+pre, p {
+    margin: 24px 0 12px 0;
+    font-size: 16px;
+}
+
+pre {
+    width: 100%;
+    padding: 20px 18px;
+    font-size: 16px;
+}
+
+pre, code {
+    margin: auto 0;
+    border-radius: 6px;
+    background: rgb(29, 29, 29);
+    color: #fff;
+}
+
+pre code {
+    padding: 0;
+}
+
+code {
+    padding: 3px 8px;
+}
+
+.hljs-keyword {
+    color: rgb(231, 152, 47);
+}
+
+@media (max-width: 1200px) {
+    .content {
+        padding: 0 10rem;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .content {
+        padding: 0 5rem;
+    }
+
 }
