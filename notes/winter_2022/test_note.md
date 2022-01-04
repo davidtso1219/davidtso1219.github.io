@@ -47,5 +47,5 @@ Here are the grades I got for Fall 2021 @ UCSD
 
 ***
 
-&copy; Designed by [Hao-Ting Tso](https://davidtso.com)
+&copy; Designed by [David & Jamie](https://davidtso.com)
 
