@@ -3,14 +3,49 @@ body {
     margin: 0 auto;
     font-family: 'Source Code Pro', monospace;
     background: #000;
-    /* color: #fff; */
-    color: rgb(34, 224, 50);
+    color: rgb(106, 243, 243);
 }
 
 .content {
     padding: 0 20rem;
     display: flex;
     flex-direction: column;
+}
+
+h1 {
+    color: #fff;
+    font-size: 45px;
+    letter-spacing: 2px;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+h1:hover:before,
+h1:hover:after {
+    margin-left: calc(20rem - 35px);
+    color: white;
+    content: attr(data-text);
+    position: absolute;
+    background: black;
+}
+
+h1:hover:before{
+    left: 3px;
+    animation: glitch-1 2s linear infinite reverse;
+}
+
+h1:hover:after{
+    left: -3px;
+    animation: glitch-2 2s linear infinite reverse;
+}
+
+h2 {
+    font-size: 28px;
 }
 
 h2, h3, h4, h5 {
@@ -22,8 +57,12 @@ pre, p {
     font-size: 16px;
 }
 
+p::selection, li::selection, th::selection, td::selection {
+    background: #fff;
+    color: #000;
+}
+
 pre {
-    width: 100%;
     padding: 20px 18px;
     font-size: 16px;
 }
@@ -37,14 +76,64 @@ pre, code {
 
 pre code {
     padding: 0;
+    color: #fff;
 }
 
 code {
     padding: 3px 8px;
+    color: rgb(247, 0, 255);
+}
+
+ol, ul {
+    margin-top: 0;
+}
+
+hr {
+    width: 100%;
+    margin: 40px 0 0 0;
+    color: #fff;
+}
+
+blockquote {
+    padding: 20px;
+    margin: auto 0;
+    /* border-left: 5px solid rgb(139, 243, 170); */
+    border-left: 5px solid #fff;
+    color: #fff;
+    background: rgb(29, 29, 29);
+}
+
+blockquote p {
+    margin: 0;
+}
+
+table {
+    min-width: 300px;
+    margin: 0 auto 0 0;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 1px solid rgb(106, 243, 243);
+}
+
+th {
+    min-width: 100px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+td {
+    padding: 8px 0 0 32px;
+}
+
+a {
+    color: rgb(0, 162, 255);
+    text-decoration: none;
 }
 
 .hljs-keyword {
-    color: rgb(231, 152, 47);
+    color: rgb(247, 0, 255);
 }
 
 @media (max-width: 1200px) {
@@ -52,6 +141,19 @@ code {
         padding: 0 10rem;
     }
 
+    h1:hover:before,
+    h1:hover:after {
+        margin-left: calc(10rem - 35px);
+        color: white;
+        content: attr(data-text);
+        position: absolute;
+        background: black;
+    }
+
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
 }
 
 @media (max-width: 700px) {
@@ -59,4 +161,157 @@ code {
         padding: 0 5rem;
     }
 
+    h1:hover:before,
+    h1:hover:after {
+        margin-left: calc(5rem - 35px);
+        color: white;
+        content: attr(data-text);
+        position: absolute;
+        background: black;
+    }
 }
+
+@keyframes glitch-1 {
+    0% {
+        clip: rect(132px, auto, 101px, 30px);
+    }
+    5% {
+        clip: rect(17px, auto, 94px, 30px);
+    }
+    10% {
+        clip: rect(40px, auto, 66px, 30px);
+    }
+    15% {
+        clip: rect(87px, auto, 82px, 30px);
+    }
+    20% {
+        clip: rect(137px, auto, 61px, 30px);
+    }
+    25% {
+        clip: rect(34px, auto, 14px, 30px);
+    }
+    30% {
+        clip: rect(133px, auto, 74px, 30px);
+    }
+    35% {
+        clip: rect(76px, auto, 107px, 30px);
+    }
+    40% {
+        clip: rect(59px, auto, 130px, 30px);
+    }
+    45% {
+        clip: rect(29px, auto, 84px, 30px);
+    }
+    50% {
+        clip: rect(22px, auto, 67px, 30px);
+    }
+    55% {
+        clip: rect(67px, auto, 62px, 30px);
+    }
+    60% {
+        clip: rect(10px, auto, 105px, 30px);
+    }
+    65% {
+        clip: rect(78px, auto, 115px, 30px);
+    }
+    70% {
+        clip: rect(105px, auto, 13px, 30px);
+    }
+    75% {
+        clip: rect(15px, auto, 75px, 30px);
+    }
+    80% {
+        clip: rect(66px, auto, 39px, 30px);
+    }
+    85% {
+        clip: rect(133px, auto, 73px, 30px);
+    }
+    90% {
+        clip: rect(36px, auto, 128px, 30px);
+    }
+    95% {
+        clip: rect(68px, auto, 103px, 30px);
+    }
+    100% {
+        clip: rect(14px, auto, 100px, 30px);
+    }
+}
+@keyframes glitch-2 {
+    0% {
+        clip: rect(129px, auto, 36px, 30px);
+    }
+    5% {
+        clip: rect(36px, auto, 4px, 30px);
+    }
+    10% {
+        clip: rect(85px, auto, 66px, 30px);
+    }
+    15% {
+        clip: rect(91px, auto, 91px, 30px);
+    }
+    20% {
+        clip: rect(148px, auto, 138px, 30px);
+    }
+    25% {
+        clip: rect(38px, auto, 122px, 30px);
+    }
+    30% {
+        clip: rect(69px, auto, 54px, 30px);
+    }
+    35% {
+        clip: rect(98px, auto, 71px, 30px);
+    }
+    40% {
+        clip: rect(146px, auto, 34px, 30px);
+    }
+    45% {
+        clip: rect(134px, auto, 43px, 30px);
+    }
+    50% {
+        clip: rect(102px, auto, 80px, 30px);
+    }
+    55% {
+        clip: rect(119px, auto, 44px, 30px);
+    }
+    60% {
+        clip: rect(106px, auto, 99px, 30px);
+    }
+    65% {
+        clip: rect(141px, auto, 74px, 30px);
+    }
+    70% {
+        clip: rect(20px, auto, 78px, 30px);
+    }
+    75% {
+        clip: rect(133px, auto, 79px, 30px);
+    }
+    80% {
+        clip: rect(78px, auto, 52px, 30px);
+    }
+    85% {
+        clip: rect(35px, auto, 39px, 30px);
+    }
+    90% {
+        clip: rect(67px, auto, 70px, 30px);
+    }
+    95% {
+        clip: rect(71px, auto, 103px, 30px);
+    }
+    100% {
+        clip: rect(83px, auto, 40px, 30px);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
