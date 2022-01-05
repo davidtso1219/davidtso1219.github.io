@@ -1,3 +1,7 @@
+---
+course: Test Note
+---
+
 #  Test Note
 
 ## Intro

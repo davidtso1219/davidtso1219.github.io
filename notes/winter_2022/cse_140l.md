@@ -1,3 +1,7 @@
+---
+course: CSE 140L
+---
+
 # CSE 140L
 
 ## Week 0
