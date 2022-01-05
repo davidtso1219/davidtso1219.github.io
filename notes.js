@@ -8,7 +8,6 @@ function sleep(milliseconds) {
 
 
 async function main() {
-    await fill_content(md_path)
 
     const ps = document.getElementsByTagName('p')
     for (var i = 0; i < ps.length; i++) {
