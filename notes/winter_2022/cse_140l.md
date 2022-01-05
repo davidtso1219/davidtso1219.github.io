@@ -1,5 +1,6 @@
 ---
 course: CSE 140L
+layout: notes
 ---
 
 # CSE 140L

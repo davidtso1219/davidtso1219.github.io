@@ -1,5 +1,6 @@
 ---
 course: Test Note
+layout: notes
 ---
 
 #  Test Note
