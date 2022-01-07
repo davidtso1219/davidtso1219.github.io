@@ -19,6 +19,7 @@ async function main() {
 
     window.onload = function() {
         var header = document.getElementsByTagName('h1')[0]
+        var content = document.querySelector('.content')
         header.setAttribute('data-text', '-' + header.textContent)
 
         header.onclick = function() {

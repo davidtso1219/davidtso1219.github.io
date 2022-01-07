@@ -10,7 +10,7 @@ body {
 }
 
 .content {
-    padding: 0 20rem;
+    margin: 0 20rem;
     display: flex;
     flex-direction: column;
 }
@@ -148,9 +148,19 @@ strong {
     color: rgb(247, 0, 255);
 }
 
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+.footer {
+    padding: 40px 0 40px 0;
+    border-top: 1px solid rgb(106, 243, 243);
+    margin: 0 20rem;
+}
+
 @media (max-width: 1200px) {
-    .content {
-        padding: 0 10rem;
+    .content, .footer {
+        margin: 0 10rem;
     }
 
     h1:hover:before,
@@ -164,12 +174,8 @@ strong {
 
 }
 
-.shake {
-    animation: shake 0.3s ease-in-out;
-}
-
 @media (max-width: 700px) {
-    .content {
+    .content, .footer {
         padding: 0 5rem;
     }
 
