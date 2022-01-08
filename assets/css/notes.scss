@@ -64,8 +64,13 @@ pre, p {
     font-size: 16px;
 }
 
-p::selection, li::selection, th::selection, td::selection {
+p::selection, li::selection, th::selection, td::selection, h1::selection, h2::selection{
     background: #fff;
+    color: #000;
+}
+
+strong::selection {
+    background: yellow;
     color: #000;
 }
 
@@ -88,11 +93,9 @@ pre code {
 
 code {
     padding: 3px 8px;
-    color: rgb(247, 0, 255);
-}
-
-ol, ul {
-    margin-top: 0;
+    color: rgb(250, 204, 77);
+    font-size: 16px;
+    white-space : pre-wrap !important;
 }
 
 hr {
@@ -144,10 +147,6 @@ strong {
     color: yellow;
 }
 
-.hljs-keyword {
-    color: rgb(247, 0, 255);
-}
-
 .shake {
     animation: shake 0.3s ease-in-out;
 }
@@ -155,7 +154,35 @@ strong {
 .footer {
     padding: 40px 0 40px 0;
     border-top: 1px solid rgb(106, 243, 243);
-    margin: 0 20rem;
+    margin: 8rem 20rem 0 20rem;
+}
+
+.footnotes, .footnotes p {
+    margin-top: 1rem;
+    color: yellow;
+    font-size: 14px;
+}
+
+.reversefootnote {
+    color: yellow;
+    font-size: 0px;
+}
+
+table ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+table li {
+    padding: 5px 0;
+}
+
+dd {
+    margin-bottom: 2rem;
+}
+
+img {
+    max-width: 400px;
 }
 
 @media (max-width: 1200px) {

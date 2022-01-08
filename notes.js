@@ -6,6 +6,11 @@ function sleep(milliseconds) {
     } while (currentDate - date < milliseconds);
 }
 
+function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
 
 async function main() {
 
@@ -25,6 +30,12 @@ async function main() {
         header.onclick = function() {
             content.classList.add('shake')
             setTimeout(() => { content.classList.remove('shake') }, 500)
+        }
+
+        var tds = document.getElementsByTagName('td')
+        for (var i = 0; i < tds.length; i++) {
+            td = tds[i]
+            td.innerHTML = decodeHtml(td.innerHTML);
         }
     }
 }

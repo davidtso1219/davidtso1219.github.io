@@ -49,8 +49,3 @@ Here are the grades I got for Fall 2021 @ UCSD
 | EDS 124BR | A+ |
 | ECON 1A | A |
 | WCWP 100 | A- |
-
-***
-
-&copy; Designed by [David & Jamie](https://davidtso.com)
-
