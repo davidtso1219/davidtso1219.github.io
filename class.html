@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;600;800&family=Readex+Pro:wght@400;600&family=Redacted+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <h1 class="class"></h1>
+        <ul class="main-list">
+        </ul>
+    </div>
+<script>
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const quarter = urlParams.get('quarter')
+    const course = urlParams.get('class')
+    const main_list = document.querySelector('.main-list')
+
+    document.querySelector('.class').textContent = course.replace(/_/, ' ').toUpperCase()
+
+    for (let i = 1; i < 11; i++) {
+        let html_to_insert = `
+        <li>
+            <div class="list">
+                <div class="arrow">></div>
+                <div class="list-text">week${i}</div>
+            </div>
+        </li>
+        `
+        console.log(html_to_insert)
+        main_list.insertAdjacentHTML('beforeend', html_to_insert)
+    }
+
+    const lists = document.querySelectorAll('.list')
+
+    for (let i = 0; i < lists.length; i++) {
+        list = lists[i]
+
+        list.addEventListener('click', function() {
+            window.location.href = "./notes/" + quarter + "/" + course + "/week_" + (i + 1)
+        })
+    }
+</script>
+</body>
+</html>
