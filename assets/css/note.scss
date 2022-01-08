@@ -6,7 +6,6 @@ body {
     margin: 0 auto;
     font-family: 'Source Code Pro', monospace;
     background: #000;
-    // color: rgb(106, 243, 243);
     color: #fff;
 }
 
@@ -76,12 +75,17 @@ p {
     font-size: 16px;
 }
 
-p::selection, li::selection, th::selection, td::selection, h1::selection, h2::selection{
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+    background: rgb(106, 243, 243);
+    color: #000;
+}
+
+p::selection, li::selection, th::selection, td::selection{
     background: #fff;
     color: #000;
 }
 
-strong::selection {
+strong::selection, .footnotes p::selection {
     background: yellow;
     color: #000;
 }
@@ -125,7 +129,7 @@ blockquote {
     padding: 20px;
     margin: auto 0;
     /* border-left: 5px solid rgb(139, 243, 170); */
-    border-left: 5px solid #fff;
+    border-left: 5px solid rgb(106, 243, 243);
     color: #fff;
     background: rgb(29, 29, 29);
 }
@@ -171,11 +175,11 @@ strong {
     max-width: 900px;
     padding: 40px 0 40px 0;
     border-top: 1px solid rgb(106, 243, 243);
-    margin: 8rem auto 0 auto;
+    margin: 2rem auto 0 auto;
 }
 
 .footnotes, .footnotes p {
-    margin-top: 1rem;
+    margin-top: 2rem;
     color: yellow;
     font-size: 14px;
 }

@@ -336,3 +336,49 @@ void swap(int& a, int& b) {
 ![image](/assets/images/cse_100/pass_by_reference.png)
 
 
+
+## Why Iterators?
+
+```cpp
+for (string name : names) {
+    cout << name << endl;
+}
+```
+
+> Do we need to know what data structure, names, are?
+> Do we need to change anything in the loop based on the data structure?
+> No! Because this is why an **iterator** is created!
+
+
+
+## Linked List Iterator
+
+```cpp
+LinkedList<string> names;
+
+LinkedList<string>::iterator itr = names.begin(); // pointer pointing to the first node
+LinkedList<string>::iterator end = names.end(); // next pointer of the last node, i.e. nullptr
+
+// Needs to overload the operators: !=, *, ++
+// *: return curr->data;
+// ++: return curr -> next;
+while(itr != end) {
+    cout << *itr << endl;
+    ++itr;
+}
+```
+
+
+
+## Creating An Iterator Class
+
+Operators in Iterator Class:
+- == true if iterators are pointing to the same item
+- != false if iterators are pointing to the same items
+- \* (dereference) return a reference to the current data value
+- ++ (pre) and ++ (post) move our iterator to the next item
+
+Funcitons in The Data Structure Class:
+- `begin()` returns iterators to the **first** element.
+- `end()` returns iterator to just after the **last** element.
+
