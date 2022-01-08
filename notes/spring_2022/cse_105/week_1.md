@@ -1,3 +1,8 @@
+---
+title: CSE 105
+layout: note_template
+---
+
 # CSE 105
 
 ## Week 0

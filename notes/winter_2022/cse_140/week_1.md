@@ -1,9 +1,9 @@
 ---
-course: CSE 140L
-layout: notes
+title: CSE 140
+layout: note_template
 ---
 
-# CSE 140L
+# CSE 140
 
 ## Week 0
 

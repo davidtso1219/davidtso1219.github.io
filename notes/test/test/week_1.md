@@ -1,6 +1,6 @@
 ---
-course: Test Note
-layout: notes
+title: Test
+layout: note_template
 ---
 
 #  Test Note

@@ -1,9 +1,9 @@
 ---
-course: CSE 100
-layout: notes
+title: CSE 100
+layout: note_template
 ---
 
-# CSE 100
+# Week 1
 
 
 

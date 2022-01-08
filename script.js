@@ -1,5 +1,5 @@
-const quarters = document.querySelectorAll(".quarter")
-const classes = document.querySelectorAll(".class")
+const quarters = document.querySelectorAll(".list")
+const classes = document.querySelectorAll(".item")
 
 function toggle_classes(quarter) {
     var classes = quarter.nextElementSibling.children
@@ -28,7 +28,7 @@ for (var i = 0; i < quarters.length; i++) {
 
 for (var i = 0; i < classes.length; i++) {
     classes[i].onclick = function() {
-        window.location.href = "./notes/" + this.getAttribute("quarter") + "/" + this.innerHTML.replace(/\ /, '_').toLowerCase()
-        // window.location.href = "./notes.html?class=" + this.innerHTML.replace(/\ /, '_').toLowerCase() + "&quarter=" + this.getAttribute("quarter")
+        // window.location.href = "./notes/" + this.getAttribute("quarter") + "/" + this.innerHTML.replace(/\ /, '_').toLowerCase()
+        window.location.href = "./class.html?class=" + this.textContent.replace(/\ /, '_').toLowerCase() + "&quarter=" + this.getAttribute("quarter")
     }
 }
