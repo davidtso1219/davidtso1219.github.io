@@ -1,6 +1,5 @@
 ---
 title: CSE 140L
-week: 1
 layout: note_template
 ---
 

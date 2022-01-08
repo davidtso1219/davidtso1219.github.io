@@ -1,5 +1,5 @@
 ---
-course: CSE 100
+title: CSE 105
 layout: note_template
 ---
 

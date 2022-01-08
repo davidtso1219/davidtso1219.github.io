@@ -1,6 +1,5 @@
 ---
 title: CSE 100
-week: 1
 layout: note_template
 ---
 

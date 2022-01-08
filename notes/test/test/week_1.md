@@ -1,5 +1,5 @@
 ---
-course: Test Note
+title: Test
 layout: note_template
 ---
 
