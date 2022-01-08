@@ -1,5 +1,6 @@
 ---
-course: CSE 140
+title: CSE 140
+week: 1
 layout: note_template
 ---
 
