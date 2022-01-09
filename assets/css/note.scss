@@ -206,31 +206,15 @@ img {
     max-width: 400px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
 
-    h1:hover:before,
-    h1:hover:after {
-        margin-left: calc(10rem - 35px);
-        color: white;
-        content: attr(data-text);
-        position: absolute;
-        background: black;
-    }
-
-}
-
-@media (max-width: 700px) {
     .content, .footer {
         padding: 0 2rem;
     }
 
     h1:hover:before,
     h1:hover:after {
-        margin-left: calc(5rem - 35px);
-        color: white;
-        content: attr(data-text);
-        position: absolute;
-        background: black;
+        margin-left: 0rem;
     }
 }
 
