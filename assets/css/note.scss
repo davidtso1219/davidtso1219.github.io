@@ -51,7 +51,7 @@ h1:hover:after{
     animation: glitch-2 2s linear infinite reverse;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6, em {
     color: rgb(106, 243, 243);
 }
 
@@ -75,12 +75,17 @@ p {
     font-size: 16px;
 }
 
-h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+h1::selection, h1::selection:hover:before, h1::selection:hover:after {
+    background: #fff;
+    color: #000;
+}
+
+h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, em::selection {
     background: rgb(106, 243, 243);
     color: #000;
 }
 
-p::selection, li::selection, th::selection, td::selection{
+p::selection, li::selection, th::selection, td::selection, dt::selection, dd::selection, sub::selection, sup::selection{
     background: #fff;
     color: #000;
 }

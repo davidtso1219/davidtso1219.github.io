@@ -167,7 +167,7 @@ Student s1 = new Student("Niema");
 Student s2 = s1;
 ```
 
-![image](/assets/images/cse_100/java_mem.png)
+![image](/assets/images/cse_100/week_1/java_mem.png)
 
 #### C++
 
@@ -176,7 +176,7 @@ Student s1("Niema");
 Student s2 = s1;
 ```
 
-![image](/assets/images/cse_100/cpp_mem.png)
+![image](/assets/images/cse_100/week_1/cpp_mem.png)
 
 ### Generic Data Structures
 
@@ -217,7 +217,7 @@ Student& s2 = s1; // Giving the same object another name
 Student s3 = s2;
 ```
 
-![image](/assets/images/cse_100/ref.png)
+![image](/assets/images/cse_100/week_1/ref.png)
 
 
 
@@ -235,7 +235,7 @@ Student* ptr = &s;
 Student** ptrPtr = &ptr; // The type of this pointer should be read as "a pointer pointing to a pointer pointing to a Student object. (from right to the left)
 ```
 
-![image](/assets/images/cse_100/pointer.png)
+![image](/assets/images/cse_100/week_1/pointer.png)
 
 
 
@@ -321,7 +321,7 @@ void swap(int a, int b) {
 }
 ```
 
-![image](/assets/images/cse_100/pass_by_value.png)
+![image](/assets/images/cse_100/week_1/pass_by_value.png)
 
 ### Pass by Reference
 
@@ -333,7 +333,7 @@ void swap(int& a, int& b) {
 }
 ```
 
-![image](/assets/images/cse_100/pass_by_reference.png)
+![image](/assets/images/cse_100/week_1/pass_by_reference.png)
 
 
 

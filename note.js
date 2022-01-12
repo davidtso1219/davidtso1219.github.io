@@ -7,7 +7,7 @@ function sleep(milliseconds) {
 }
 
 function decodeHtml(html) {
-    var txt = document.createElement("textarea");
+    let txt = document.createElement("textarea");
     txt.innerHTML = html;
     return txt.value;
 }
@@ -15,8 +15,8 @@ function decodeHtml(html) {
 async function main() {
 
     window.onload = function() {
-        var header = document.getElementsByTagName('h1')[0]
-        var content = document.querySelector('.content')
+        let header = document.getElementsByTagName('h1')[0]
+        let content = document.querySelector('.content')
         header.setAttribute('data-text', '-' + header.textContent)
 
         header.onclick = function() {
@@ -24,10 +24,17 @@ async function main() {
             setTimeout(() => { content.classList.remove('shake') }, 500)
         }
 
-        var tds = document.getElementsByTagName('td')
-        for (var i = 0; i < tds.length; i++) {
-            td = tds[i]
+        let tds = document.getElementsByTagName('td')
+        for (let i = 0; i < tds.length; i++) {
+            let td = tds[i]
             td.innerHTML = decodeHtml(td.innerHTML);
+        }
+
+        let bqs = document.getElementsByTagName('blockquote')
+        for (let i = 0; i < bqs.length; i++) {
+            let blockquote = bqs[i]
+            if (blockquote.previousElementSibling.tagName == 'BLOCKQUOTE')
+                blockquote.style.marginTop = '10px'
         }
     }
 }
