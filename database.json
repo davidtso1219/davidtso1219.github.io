@@ -1,0 +1,45 @@
+[
+    {
+        "quarter": "Test",
+        "courses": [
+            {
+                "name": "Test Note",
+                "weeks": 1
+            }
+        ]
+    },
+    {
+        "quarter": "Winter 2022",
+        "courses": [
+            {
+                "name": "CSE 100",
+                "weeks": 2
+            },
+            {
+                "name": "CSE 140",
+                "weeks": 1
+            },
+            {
+                "name": "CSE 140L",
+                "weeks": 1
+            }
+        ]
+    },
+    {
+        "quarter": "Spring 2022",
+        "courses": [
+            {
+                "name": "CSE 101",
+                "weeks": 0
+            },
+            {
+                "name": "CSE 105",
+                "weeks": 0
+            },
+            {
+                "name": "CSE 110",
+                "weeks": 0
+            }
+        ]
+    }
+]

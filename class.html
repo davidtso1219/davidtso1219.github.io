@@ -18,37 +18,6 @@
         <ul class="main-list">
         </ul>
     </div>
-<script>
-    const queryString = window.location.search
-    const urlParams = new URLSearchParams(queryString)
-    const quarter = urlParams.get('quarter')
-    const course = urlParams.get('class')
-    const main_list = document.querySelector('.main-list')
-
-    document.querySelector('.class').textContent = course.replace(/_/, ' ').toUpperCase()
-
-    for (let i = 1; i < 3; i++) {
-        let html_to_insert = `
-        <li>
-            <div class="list">
-                <div class="arrow">></div>
-                <div class="list-text">week${i}</div>
-            </div>
-        </li>
-        `
-        console.log(html_to_insert)
-        main_list.insertAdjacentHTML('beforeend', html_to_insert)
-    }
-
-    const lists = document.querySelectorAll('.list')
-
-    for (let i = 0; i < lists.length; i++) {
-        list = lists[i]
-
-        list.addEventListener('click', function() {
-            window.location.href = "./notes/" + quarter + "/" + course + "/week_" + (i + 1)
-        })
-    }
-</script>
+<script src="class.js"></script>
 </body>
 </html>
