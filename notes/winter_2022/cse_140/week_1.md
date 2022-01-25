@@ -28,7 +28,7 @@ layout: note_template
 
 ![image](/assets/images/cse_140/week_1/not_gate.png)
 
-| A | P1 | N1 | Y |
+| A | P<sub>1</sub> | N<sub>1</sub> | Y |
 |:-:|:--:|:--:|:-:|
 | 0 |  1 |  0 | 1 |
 | 1 |  0 |  1 | 0 |
@@ -37,7 +37,7 @@ layout: note_template
 
 ![image](/assets/images/cse_140/week_1/nand_gate.png)
 
-| A | B | P1 | P2 | N1 | N2 | Y |
+| A | B | P<sub>1</sub> | P<sub>2</sub> | N<sub>1</sub> | N<sub>2</sub> | Y |
 |:-:|:-:|:--:|:--:|:--:|:--:|:-:|
 | 0 | 0 |  1 |  1 |  0 |  0 | 1 |
 | 0 | 1 |  1 |  0 |  0 |  1 | 1 |
@@ -48,7 +48,7 @@ layout: note_template
 
 ![image](/assets/images/cse_140/week_1/and_gate.png)
 
-| A | B | P1 | P2 | N1 | N2 |
+| A | B | P<sub>1</sub> | P<sub>2</sub> | N<sub>1</sub> | N<sub>2</sub> |
 |:-:|:-:|:--:|:--:|:--:|:--:|
 | 0 | 0 |  1 |  1 |  0 |  0 |
 | 0 | 1 |  1 |  0 |  0 |  1 |
@@ -67,7 +67,7 @@ layout: note_template
 
 ![image](/assets/images/cse_140/week_1/nor_gate.png)
 
-| A | B | P1 | P2 | N1 | N2 | Y |
+| A | B | P<sub>1</sub> | P<sub>2</sub> | N<sub>1</sub> | N<sub>2</sub> | Y |
 |:-:|:-:|:--:|:--:|:--:|:--:|:-:|
 | 0 | 0 |  1 |  1 |  0 |  0 | 1 |
 | 0 | 1 |  1 |  0 |  0 |  1 | 0 |
@@ -78,7 +78,7 @@ layout: note_template
 
 ![image](/assets/images/cse_140/week_1/or_gate.png)
 
-| A | B | P1 | P2 | N1 | N2 |
+| A | B | P<sub>1</sub> | P<sub>2</sub> | N<sub>1</sub> | N<sub>2</sub> |
 |:-:|:-:|:--:|:--:|:--:|:--:|
 | 0 | 0 |  1 |  1 |  0 |  0 |
 | 0 | 1 |  1 |  0 |  0 |  1 |
