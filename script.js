@@ -1,4 +1,4 @@
-const main_list = document.querySelector(".main-list")
+const notes = document.querySelector(".notes-list")
 
 function toggle_classes(quarter) {
     var classes = quarter.nextElementSibling.children
@@ -46,7 +46,7 @@ async function main() {
         </li>
         `
 
-        main_list.insertAdjacentHTML('beforeend', outer_list)
+        notes.insertAdjacentHTML('beforeend', outer_list)
     }
 
     const quarters = document.querySelectorAll(".list")
