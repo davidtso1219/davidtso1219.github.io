@@ -112,3 +112,19 @@ F'(a, b, c) = a'b'c' + a'bc' + a'b'c = **M(1, 3, 5, 6, 7)**
 | 5 | 1 | 0 | 1 | 1 | 0 |
 | 6 | 0 | 1 | 1 | 1 | 0 |
 | 7 | 1 | 1 | 1 | 1 | 0 |
+
+## K-Map
+
+### Two Varaible K-Map Example (SOP)
+
+f(A, B) = A + B
+
+![image](/assets/images/cse_140/week_2/two_var_kmap.png)
+
+### Three Varaible K-Map Example (SOP)
+
+f(A, B) = A'B + AC + BC = A'B + AC (Consensus Theorem)
+
+![image](/assets/images/cse_140/week_2/three_var_kmap.png)
+
+\* BC is unneccesary because AB and AC already cover everything thing
