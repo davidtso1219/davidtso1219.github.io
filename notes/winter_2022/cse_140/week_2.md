@@ -128,4 +128,10 @@ f(A, B) = A'B + AC + BC = A'B + AC (Consensus Theorem)
 
 \* BC is unneccesary because AB and AC already cover everything thing
 
+### Four Variable K-Map Example (SOP)
+
+F = C + B'D' + A'BD = m(0, 2, 3, 4, 5, 6, 7, 8, 10, 11, 14, 15)
+
+![image](/assets/images/cse_140/week_2/four_var_kmap.png)
+
 [^1]: Z means floating: that we don't know what the value should be.
