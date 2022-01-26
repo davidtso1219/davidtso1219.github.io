@@ -15,7 +15,6 @@ layout: note_template
 | 0 | 1 | 0 |
 | 1 | 1 | 1 |
 
-[^1]: Z means floating: that we don't know what the value should be.
 
 ## Multiplexer
 
@@ -128,3 +127,5 @@ f(A, B) = A'B + AC + BC = A'B + AC (Consensus Theorem)
 ![image](/assets/images/cse_140/week_2/three_var_kmap.png)
 
 \* BC is unneccesary because AB and AC already cover everything thing
+
+[^1]: Z means floating: that we don't know what the value should be.

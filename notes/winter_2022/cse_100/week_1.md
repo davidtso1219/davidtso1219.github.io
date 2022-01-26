@@ -50,9 +50,6 @@ layout: note_template
 | -- | -- |
 | <ul><li>boolean (usually 1 byte)[^1]</li><li>char (2 bytes)</li></ul> | <ul><li>bool (usually 1 byte)[^1]</li></ul> |
 
-[^1]: Although a boolean only stores a bit of information, we still use a whole byte to store a boolean.
-
-
 
 ### String:
 
@@ -382,3 +379,4 @@ Funcitons in The Data Structure Class:
 - `begin()` returns iterators to the **first** element.
 - `end()` returns iterator to just after the **last** element.
 
+[^1]: Although a boolean only stores a bit of information, we still use a whole byte to store a boolean.
