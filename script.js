@@ -9,7 +9,7 @@ function toggle_classes(quarter) {
 }
 
 async function fetch_database() {
-    let response = await fetch('./database.json')
+    let response = await fetch('/database.json')
 
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -70,7 +70,7 @@ async function main() {
 
     for (var i = 0; i < classes.length; i++) {
         classes[i].onclick = function() {
-            window.location.href = "./class.html?class=" + this.textContent.replace(/\ /, '_').toLowerCase() + "&quarter=" + this.getAttribute("quarter")
+            window.location.href = "/class.html?class=" + this.textContent.replace(/\ /, '_').toLowerCase() + "&quarter=" + this.getAttribute("quarter")
         }
     }
 

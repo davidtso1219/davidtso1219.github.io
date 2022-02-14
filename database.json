@@ -1,14 +1,5 @@
 [
     {
-        "quarter": "Test",
-        "courses": [
-            {
-                "name": "Test Note",
-                "weeks": 1
-            }
-        ]
-    },
-    {
         "quarter": "Winter 2022",
         "courses": [
             {
