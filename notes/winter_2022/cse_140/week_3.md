@@ -73,3 +73,52 @@ Examples:
     - 10 wires (10 literals + 3 internal wires)
 
 [^1]: In the design of multilevel gates, we will put more and more CMOS gates in series, which will increase the total resistance of the serie, so the delay will become greater and greater. In 3-inupt AND gate will have 3R * 2C = 6RC of delay. (2C because of the internal NOT gate of an AND gate)
+
+## Multiplexer (MUX)
+
+- Select one of **N inputs** to connect to output
+- Ex: 4:1 Multiplexer
+
+![image](/assets/images/cse_140/week_3/mux.png)
+
+## Demultiplexer (DeMUX)
+
+- Select one of **N outputs** to connect to intput
+- Ex: 1:2 Demultiplexer, 1:4 Demultiplexer
+
+![image](/assets/images/cse_140/week_3/demux.png)
+
+## Decoder
+
+- N inputs, 2<sup>N</sup> outputs
+- One-hot outputs: only one output HIGH at a time when enable signal is 1 (EN=1)
+- Ex: 2:4 Decoder
+
+![image](/assets/images/cse_140/week_3/decoder.png)
+
+## 2's Complement
+
+- If N is a positive number, then negative of N is bit-wise complement plus 1.
+- Ex:
+    1. 7 = b'0111 -> 1000 + 1 = 1001 = -7
+    2. -7 = b'1001 -> 0110 + 1 = 0111 = 7
+
+## Subtractor
+
+![image](/assets/images/cse_140/week_3/subtractor.png)
+
+## Comparator: Equality
+
+![image](/assets/images/cse_140/week_3/equality.png)
+
+## Comparator: Inequality
+
+![image](/assets/images/cse_140/week_3/inequality.png)
+
+## Shifter
+
+![image](/assets/images/cse_140/week_3/shifter.png)
+
+## ALU
+
+- Combinations of different components with a selector at the end to select operations to perform
