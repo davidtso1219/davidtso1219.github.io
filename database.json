@@ -4,11 +4,11 @@
         "courses": [
             {
                 "name": "CSE 100",
-                "weeks": 3
+                "weeks": 6
             },
             {
                 "name": "CSE 140",
-                "weeks": 3
+                "weeks": 4
             },
             {
                 "name": "CSE 140L",
