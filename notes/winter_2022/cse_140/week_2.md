@@ -3,7 +3,7 @@ title: CSE 140
 layout: note_template
 ---
 
-# CSE 140
+# Week 2
 
 ## Pass Gate
 

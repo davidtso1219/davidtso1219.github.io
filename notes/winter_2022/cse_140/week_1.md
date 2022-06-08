@@ -3,7 +3,7 @@ title: CSE 140
 layout: note_template
 ---
 
-# CSE 140
+# Week 1
 
 ## CMOS Switches (nMOS vs. pMOS)
 
