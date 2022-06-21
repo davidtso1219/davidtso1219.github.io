@@ -45,7 +45,7 @@ async function main() {
         <li>
             <div class="list">
                 <div class="arrow">></div>
-                <div class="list-text">week${i+1}</div>
+                <div class="list-text">Week ${i+1}</div>
             </div>
         </li>
         `
