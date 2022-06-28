@@ -201,26 +201,26 @@ e.offSetX
 ## Example for Storage
 ```js
 document.querySelector('form').addEventListener('submit',
-function(e) {
-    const task = document.getElementById('task').value;
+    function(e) {
+        const task = document.getElementById('task').value;
 
-    let tasks;
+        let tasks;
 
-    if (localStorage.getItem('tasks') === null) {
-        tasks = [];
-    }
-    else {
-        tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
+        if (localStorage.getItem('tasks') === null) {
+            tasks = [];
+        }
+        else {
+            tasks = JSON.parse(localStorage.getItem('tasks'));
+        }
 
-    tasks.push(task);
+        tasks.push(task);
 
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+        localStorage.setItem('tasks', JSON.stringify(tasks));
 
-    alert('Task saved');
+        alert('Task saved');
 
-    e.preventDefault();
-});
+        e.preventDefault();
+    });
 ```
 
 [^1]: **mouseenter** and **mouseleave** will not be called if the mouse enters or leaves a child element of the event target, while **mouseover** and **mouseout** will be called even if the mouse enters or leaves a child element of the event target
