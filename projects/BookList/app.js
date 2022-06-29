@@ -6,59 +6,6 @@ const titleInput = document.querySelector('#title'),
     bookForm = document.querySelector('#book-form'),
     bookList = document.querySelector('#book-list');
 
-main();
-
-function main() {
-    loadEventListeners();
-}
-
-function loadEventListeners() {
-    bookForm.addEventListener('submit', addBook);
-    bookList.addEventListener('click', removeBook);
-}
-
-function addBook(e) {
-
-    // get fields from the form
-    const title = titleInput.value,
-        author = authorInput.value,
-        isbn = isbnInput.value;
-
-    // check the values
-    if (!title || !author || !isbn) {
-        UI.showMessage('Please fill in all fields', true);
-        return;
-    }
-
-    // instantiate a new book
-    let book = new Book(title, author, isbn);
-
-    // add the book to the book list
-    UI.addBookToList(book);
-
-    // clear input fields
-    UI.clearInputs();
-
-    // show success message
-    UI.showMessage('Book Added', false);
-
-    // add book to the list
-    e.preventDefault();
-}
-
-function removeBook(e) {
-
-    // check if the client is clicking the delete button
-    if (!e.target.classList.contains('delete')) {
-        return;
-    }
-
-    e.target.parentElement.parentElement.remove();
-
-    // show success message
-    UI.showMessage('Book Removed', false);
-}
-
 class Book {
     constructor(title, author, isbn) {
         this.title = title;
@@ -113,4 +60,97 @@ class UI {
     static clearMessage() {
         document.querySelector('.alert').remove();
     }
+}
+
+class Store {
+    constructor() {}
+
+    static getBooks() {
+        return localStorage.getItem('books') === null ? [] : JSON.parse(localStorage.getItem('books'));
+    }
+
+    static displayBooks() {
+        const books = Store.getBooks();
+        books.forEach((book) => {
+            UI.addBookToList(book);
+        });
+    }
+
+    static addBook(book) {
+        const books = Store.getBooks();
+        books.push(book);
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+
+    static removeBook(isbn) {
+        const books = Store.getBooks();
+
+        books.forEach(function(book, index){
+            if(book.isbn === isbn) {
+                books.splice(index, 1);
+            }
+        });
+
+        localStorage.setItem('books', JSON.stringify(books));
+      }
+}
+
+main();
+
+function main() {
+    loadEventListeners();
+}
+
+function loadEventListeners() {
+    document.addEventListener('DOMContentLoaded', Store.displayBooks);
+    bookForm.addEventListener('submit', addBook);
+    bookList.addEventListener('click', removeBook);
+}
+
+function addBook(e) {
+
+    // get fields from the form
+    const title = titleInput.value,
+        author = authorInput.value,
+        isbn = isbnInput.value;
+
+    // check the values
+    if (!title || !author || !isbn) {
+        UI.showMessage('Please fill in all fields', true);
+        return;
+    }
+
+    // instantiate a new book
+    let book = new Book(title, author, isbn);
+
+    // add the book to the book list
+    UI.addBookToList(book);
+
+    // add the book to the local storage
+    Store.addBook(book);
+
+    // clear input fields
+    UI.clearInputs();
+
+    // show success message
+    UI.showMessage('Book Added', false);
+
+    // add book to the list
+    e.preventDefault();
+}
+
+function removeBook(e) {
+
+    // check if the client is clicking the delete button
+    if (!e.target.classList.contains('delete')) {
+        return;
+    }
+
+    // remove the book from the local storage
+    Store.removeBook(e.target.parentElement.previousElementSibling.textContent)
+
+    e.target.parentElement.parentElement.remove();
+
+    // show success message
+    UI.showMessage('Book Removed', false);
 }
