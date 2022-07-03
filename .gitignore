@@ -3,3 +3,6 @@ images/logo*
 # jekyll
 _site/
 .jekyll-cache
+
+# vscode
+.vscode/
