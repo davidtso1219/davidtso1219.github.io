@@ -54,10 +54,10 @@ async function main() {
 
     const lists = document.querySelectorAll('.list')
     for (let i = 0; i < lists.length; i++) {
-        list = lists[i]
+        let list = lists[i]
 
         list.addEventListener('click', function() {
-            window.location.href = "./notes/" + quarter + "/" + course + "/week_" + (i + 1)
+            window.location.href = "./notes/" + quarter + "/" + course + "/week_" + (i + 1);
         })
     }
 
