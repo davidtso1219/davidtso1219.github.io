@@ -42,6 +42,10 @@
             },
             {
                 "name": "Udemy React",
+                "weeks": 14
+            },
+            {
+                "name": "WDS React Hooks",
                 "weeks": 6
             }
         ]

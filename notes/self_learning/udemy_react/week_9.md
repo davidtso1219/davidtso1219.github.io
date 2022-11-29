@@ -7,7 +7,7 @@ layout: note_template
 
 ## JSX Limit Workaround
 
-- Wrapping two or more elements in a div tag would result in a lot of unnecessary div elements
+- Wrapping two or more elements in a `div` tag would result in a lot of unnecessary `div` elements
 - There are a few better workarounds
   1. create a Wrapper component that return `props.children` immediately
   2. use `React.Fragment` or empty tag, i.e. `<></>`

@@ -57,7 +57,7 @@ const Button = props => {
 };
 
 // with module CSS
-import style from 'Button.module.css';
+import styles from 'Button.module.css';
 
 const Button = props => {
     return (

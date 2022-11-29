@@ -21,7 +21,7 @@ npm start
 
 ```js
 function MyComponent() {
-  return;
+  return
   <div className="my-component">
     <OtherComponent></OtherComponent>
   </div>;
