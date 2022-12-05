@@ -3,7 +3,7 @@ title: Udemy JS
 layout: note_template
 ---
 
-# Section 15
+# Section 16
 
 ## Custom Input Hook
 
