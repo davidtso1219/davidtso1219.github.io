@@ -273,3 +273,94 @@ There are two different ways for data to flow from one node to another node.
 - There will be two special packets called **Call request** and **Call accept** used to find the preplanned route
 - Therefore, the path for each packet is fixed.
 
+## Layering
+
+- Layering means decomposing the problem into more manageable components, and then solving the problem by connect the solutions to each component
+- Two layered architectures are
+
+  1. The OSI Reference Model
+  2. The TCP/IP Model
+
+## OSI Model
+
+- OSI stands for Open System Interconnection
+- It is a model for a network architecture that is flexible, robust and interoperable
+- OSI Model is only a guildline for such design but not an implemented protocol
+
+### OSI Model Layers
+
+- There are seven layers in OSI Reference Model
+
+  1. Physical Layer
+  2. Data Link Layer
+  3. Network Layer
+  4. Transport Layer
+  5. Session Layer
+  6. Presentation Layer
+  7. Application Layer
+
+- Sender node will process the data from application layer (layer 7) down to physical layer (layer 1)
+- Receive will process the data from physical layer (layer 1) up to application layer (layer 7)
+- Intermediary Nodes will only know the data from layer 1 to layer 3 (any intermediary nodes trying to get data above that layer are attackers)
+
+### Services of Each Layer
+
+#### Application Layer
+
+- Summary: enables users to access the network resources
+- File Transfer & Access Management
+- Mail Services
+- Directory Services
+
+#### Presentation Layer
+
+- Summary: handles the syntax and semantics of the information exhanged between two systems
+- Translation
+- Encryption
+- Compression
+
+#### Sessoin Layer
+
+- Summary: establishes, maintains, synchronizes the interaction aong communicating devices
+- Dialog Control (controlling the dialogs between two nodes)
+- Synchronization (synchronizing the dialogs)
+
+#### Transport Layer
+
+- Summary: processes the delivery of the entire message for process on the node
+- Port addressing (Port addressing)
+- Segmentation and Reassembly (breaking data at sender and reassemble at receiver)
+- Connection Control (controling the connection if the communication is connection-oriented)
+- End-to-End Flow Control (matching the speed of the transmission due to the different data handling speeds of nodes)
+- Error Control (finding error in the transmission)
+
+#### Network Layer
+
+- Summary: Delivers data from the original source to the destination network
+- Logical Addressing (IP addressing)
+- Routing (finding the best route)
+
+#### DataLink Layer
+
+- Summary: Moves data (frames) from one node to another node
+- Framing (grouping bits of 0's and 1's)
+- Physical Addressing (MAC address)
+- Flow Control (identifying if the frame is corrupted or damaged)
+- Error Control (handling error if there is one)
+- Access Control (controlling the access of the data link if there are multiple communications on a single link)
+
+#### Physical Layer
+
+- Summary: Transmits data over a medium
+- Physical Characteristics of The Media (wireless/wired)
+- Representations of Bits (converting bits into waves/signals)
+- Data Rate (rate of the tranmitted waves/signals)
+- Synchronization of Bits (synchronizing the clocks between the receiver and the sender)
+- Line Configuration (point-to-point configurations / point-to-multipoint configuration)
+- Physical Topolgy (topologies in [previous sections](#network-topologies))
+- Transmission Mode (Singlex/Half Duplex/Full Duplex)
+
+## TCP/IP Model
+
+- TCP/IP stands for Transmission Control Protocol/Internet Protocol
+- TCP/IP is a hierarchical protocol made up of interactive modules, and each module provides a specific functionality

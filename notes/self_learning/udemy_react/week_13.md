@@ -1,5 +1,5 @@
 ---
-title: Udemy JS
+title: Udemy React
 layout: note_template
 ---
 
