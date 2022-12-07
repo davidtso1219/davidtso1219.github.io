@@ -81,6 +81,61 @@ layout: note_template
   5. Amazon S3 Glacier Flexible Retrieval
   6. Amazon S3 Glacier Deep Archive
   7. Amazon S3 Intelligent Tiering
+- A feature called **lifecycle rule** can be used to move S3 objects between different storage classes
 - You can check [here](https://aws.amazon.com/s3/storage-classes/) for comparison in availabilities and [here](https://aws.amazon.com/s3/pricing/) for prices
 
 ## S3 Encryption
+
+- There are three types of encryption in S3
+  1. No Encryption - No encryptino at all
+  2. Server Side Encryption - Objects are encrypted after being uploaded to a bucket
+  3. Client Side Encryption - Objects are encrypted before being uploaded to a bucket by the client
+
+## Shared Responsibility Model
+
+- AWS: Provide and maintain the infrastructure
+- Users: Should protect the data by correctly using the S3 services. For example,
+  - Versioning
+  - Bucket Policy
+  - Replication Setup
+  - Storage Classes
+  - Encryption at rest and in transit
+
+## S3 Snow Family
+
+- Highly secure, portable devices to migrate data in or out of AWS (data migration) and to collect and process data at edge (edge computing)
+- There are 3 types of devices in Snow Family
+  1. Snowcone
+  2. Snowball Edge
+  3. Snowmobile
+- We can use an application called **AWS OpsHub** to manage our AWS Snow Family devices
+- It's recommended to use a fleet of Snowballs to move less than 10PBs of data. Over this quantity, it's better-suited to use Snowmobile.
+- More information [here](https://aws.amazon.com/snow/#Feature_comparison_matrix)
+
+### Edge Computing
+
+- Edge computing means to process data while it’s being created on an edge location
+- Edges are locations that may have *limited / no access to Internet / computing power*
+- Use case
+  - Preprocess
+  - Maching Learning
+  - Transcoding mediea streams
+
+## AWS Storage Gateway
+
+- AWS Storage Gateway is to bridge the data from our on premises servers to the Cloud
+- There are three different types of Storage Gateway: using
+  1. File Gateway
+  2. Volume Gateway
+  3. Tape Gateway
+
+## Summary
+
+- S3 security: IAM Policy, IAM Role, S3 Bucket Policy (public access), S3 Encryption
+- S3 Websites: a feature to host a static website on Amazon S3
+- S3 Versioning: a feature to store multiple versions for files, prevent accidental deletes
+- S3 Replication: a feature to copy actions from a bucket to another one in the same region or a different region, must enable versioning
+- S3 Storage Classes: Standard, IA, 1Z-IA, Intelligent, Glacier (Instant, Flexible, Deep)
+- Snow Family: a feature to migrate data onto or out of S3 and to achieve edge computing
+- OpsHub: desktop application to manage Snow Family devices
+- Storage Gateway: a solution to extend on-premises storage to S3
