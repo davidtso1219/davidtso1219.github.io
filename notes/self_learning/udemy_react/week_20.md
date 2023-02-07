@@ -389,7 +389,7 @@ const App = () => {
 
 - In version 6.4, `BrowserRouter` is no longer supported
 - Instead, we need to use a provider component called `RoutersProvider`, and we need to pass a router object to the provider component
-- And we can `createBrowserRouter` to create a router object and use `createRoutesFromElement` to create routes from `Route` elements
+- And we can `createBrowserRouter` to create a router object and use `createRoutesFromElements` to create routes from `Route` elements
 
   - use a property called `index` to note the index route
 
@@ -398,7 +398,7 @@ const App = () => {
 ```js
 const App = () => {
   const router = createBrowserRouter(
-    createRoutesFromElement(
+    createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<WelcomePage />} />
         <Route path="/posts" element={<PostsLayout />}>
@@ -445,7 +445,7 @@ const ErrorPage = () => {
 ```js
 const App = () => {
   const router = createBrowserRouter(
-    createRoutesFromElement(
+    createRoutesFromElements(
       <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
         ...
       </Route>
@@ -505,7 +505,7 @@ import NewPostPage, {
 
 const App = () => {
   const router = createBrowserRouter(
-    createRoutesFromElement(
+    createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         ...
         <Route

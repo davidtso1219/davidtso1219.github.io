@@ -50,7 +50,7 @@ const createNewTodo = name => {
 
 const App = () => {
   const [name, setName] = useState("");
-  const [todos, dispatch] = useReducer(reducer, []);
+  const [todos, dispatch] = useReducer(reducer, [], null);
 
   const submitForm = (e) => {
     e.preventDefault();

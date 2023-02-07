@@ -47,11 +47,11 @@ const App = () => {
 
 ## Different Usages
 1. No Dependency, i.e. a function passed in `useEffect`
-    - Effect: only called when the component is mounted, i.e. created **at the first time** and won't be called when rerendered
-    - Cleanup: only called when the component is unmounted
-2. Empty Dependency, i.e. a function and an empty array passed in `useEffect`
     - Effect: Anytime the component is rerendered.
     - Cleanup: Anytime before the component is rerendered
+2. Empty Dependency, i.e. a function and an empty array passed in `useEffect`
+    - Effect: only called when the component is mounted, i.e. created **at the first time** and won't be called when rerendered
+    - Cleanup: only called when the component is unmounted
 3. Non-Empty Dependencies, i.e. a function and an non-empty array passed in `useEffect`
     - Effect: Anytime any dependency is changed
     - Cleanup: Anytime before any dependency is changed

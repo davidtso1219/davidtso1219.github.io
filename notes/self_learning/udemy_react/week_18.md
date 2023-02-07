@@ -69,11 +69,11 @@ root.render(
 // in components/counter.js
 import { useSelector, useDispatch } from "react-redux";
 
-const Counter = (props) => {
+const Counter = props => {
   const dispatch = useDispatch();
 
   // this is how you subscribe to a state in the store
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector(state => state.counter);
 
   const incrementHandler = () => {
     dispatch({ type: "increment" });
@@ -167,47 +167,47 @@ export default connect(mapStatetoProps, mapDispatchToProps)(Counter);
 
 ```js
 // in store/index.js
-import { createSlice, configureStore } from '@reduxjs/toolkit';
+import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 const initialState = { counter: 0, showCounter: true };
 
 const counterSlice = createSlice({
-  name: 'counter',
+  name: "counter",
   initialState: initialState,
   reducers: {
-    increment: (state) => {
+    increment: state => {
       state.counter++;
     },
-    decrement: (state) => {
+    decrement: state => {
       state.counter--;
     },
     increase: (state, action) => {
       state.counter += action.payload;
     },
-    toggle: (state) => {
+    toggle: state => {
       state.showCounter = !state.showCounter;
     },
-  }
+  },
 });
 
 const store = configureStore({
-  reducer: counterSlice.reducer
-})
+  reducer: counterSlice.reducer,
+});
 
 export const counterActions = counterSlice.actions;
 export default store;
 ```
 
 ```js
-import { useSelector useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 
-import { counterActions } from '../store/index';
-import classes from './Counter.module.css';
+import { counterActions } from "../store/index";
+import classes from "./Counter.module.css";
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.counter);
-  const show = useSelector((state) => state.showCounter);
+  const counter = useSelector(state => state.counter);
+  const show = useSelector(state => state.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
@@ -274,8 +274,8 @@ export default store;
 // in components/counter.js
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.counter.counter); // access the slice and then the state of that slice.
-  const show = useSelector((state) => state.counter.showCounter);
+  const counter = useSelector(state => state.counter.counter); // access the slice and then the state of that slice.
+  const show = useSelector(state => state.counter.showCounter);
 
   // ...everything remains the same
 };
